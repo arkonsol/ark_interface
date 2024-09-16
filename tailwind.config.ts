@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        cteal: "#008080",
+        clightTeal: "#20B2AA",
       },
       fontFamily: {
         sans: ['var(--font-ibm-plex-mono)', 'monospace'],
@@ -21,6 +23,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui'),],
 };
 export default config;
