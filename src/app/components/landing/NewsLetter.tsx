@@ -1,10 +1,11 @@
+"use client"
 import React from "react";
 
 const NewsLetter = () => {
   return (
     <div>
-      <div className="hero w-full bg-gradient-to-br from-cteal to-black py-12 sm:py-20 px-4">
-        <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero w-full bg-gradient-to-br from-black via-teal-700 to-black py-12 sm:py-20 px-4">
+        <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Stay Updated with Ark!</h1>
             <p className="py-6">
@@ -22,14 +23,14 @@ const NewsLetter = () => {
                 </label>
                 <input
                   type="email"
-                  placeholder="Enter Your email address"
+                  placeholder="Enter Your Email Address"
                   className="input input-bordered"
                   required
                 />
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary bg-clightTeal hover:bg-cteal border-none text-white">
-                  Subscribe to News Letter
+                  Subscribe
                 </button>
               </div>
             </form>
