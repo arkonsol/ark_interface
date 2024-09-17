@@ -1,6 +1,6 @@
 import DashboardHeader from '../components/getstarted/DashboardHeader';
 import Footer from '../components/landing/Footer';
-
+import AppWalletProvider from '../components/AppWalletProvider';
 export default function DashboardLayout({
   children,
 }: {
@@ -9,7 +9,9 @@ export default function DashboardLayout({
   return (
     <div>
       <DashboardHeader />
-      <main>{children}</main>
+      <main>
+        <AppWalletProvider>{children}</AppWalletProvider>
+      </main>
       <Footer />
     </div>
   )

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { FiBell, FiGlobe, FiCheck } from 'react-icons/fi';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 const navItems = [
   { name: 'Notifications', href: '/notifications', icon: FiBell },
@@ -49,28 +50,28 @@ export default function DashboardHeader() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
           <Image
-            src="/images/ark.jpg" 
+            src="/images/ark.jpg"
             alt="ARK Logo"
             width={60}
             height={40}
-            className="rounded-full" 
+            className="rounded-full"
           />
           <h1 className="text-2xl font-bold font-heading text-white">ARK</h1>
         </Link>
-        
+
         {/* Mobile menu button */}
-        <button 
+        <button
           className="md:hidden text-white focus:outline-none"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <svg 
-            className="w-6 h-6" 
-            fill="none" 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            strokeWidth="2" 
-            viewBox="0 0 24 24" 
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
             stroke="currentColor"
           >
             {isMenuOpen ? (
@@ -83,6 +84,11 @@ export default function DashboardHeader() {
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-4">
+          <WalletMultiButton
+            style={{
+              color: 'white',
+              background: "linear-gradient(to bottom right,#14b8a6,#134e4a )"
+            }} />
           {navItems.map((item) => (
             <div key={item.name} className="relative">
               {item.name === 'Language' ? (
@@ -164,7 +170,11 @@ export default function DashboardHeader() {
             </li>
           ))}
           <li className="py-2">
-            {/* Wallet comes in here */}
+           <WalletMultiButton
+            style={{
+              color: 'white',
+              background: "linear-gradient(to bottom right,#14b8a6,#134e4a )"
+            }} /> 
           </li>
         </ul>
       </nav>
