@@ -2,29 +2,29 @@
 import React from "react";
 const faqQuestions = [
   {
-    question: "What is Ark?",
+    question: "What is ARK?",
     answer:
-      "Ark is a platform that helps individuals and communities create and manage Public Autonomous Organizations (PAOs) on the blockchain.",
+      "ARK is an onchain protocol that facilitates the creation and management of Para Autonomous Organizations (PAOs) on the blockchain.",
   },
   {
-    question: "Which blockchains does Ark support?",
+    question: "Which blockchains does ARK support?",
     answer:
-      "Ark currently supports Solana, BNB Chain, Ethereum, Polygon, and more. You can deploy PAOs on these blockchains, and we are constantly adding support for additional networks.",
+      "ARK currently supports Solana. The team will be adding support for additional networks. Anticipate",
   },
   {
-    question: "Do I need coding skills to use Ark?",
+    question: "Do I need coding skills to use ARK?",
     answer:
-      "No, Ark is designed to be user-friendly and accessible to people with no coding experience. However, for more advanced customization, coding knowledge can be helpful.",
+      "No, ARK is designed to be user-friendly and accessible to people with no coding experience. However, for more advanced customization, coding knowledge can be helpful.",
   },
   {
-    question: "Is Ark free to use?",
+    question: "Is ARK free to use?",
     answer:
-      "Ark offers a free tier with basic features. For advanced functionalities, such as integrating with multiple blockchains or accessing premium templates, there are paid plans available.",
+      "Yes. ARK is free to use",
   },
   {
-    question: "How is Ark different from other DAO platforms?",
+    question: "How is ARK different from other DAO platforms?",
     answer:
-      "Ark is focused on creating Para Autonomous Organizations (PAOs), which are designed for open governance and public participation. Unlike traditional DAOs, PAOs prioritize transparency and inclusivity for both community members and external participants.",
+      "ARK is focused on creating Para Autonomous Organizations (PAOs), which are designed for flexibility, interopability, modularity and governance agnosticism",
   },
 ];
 

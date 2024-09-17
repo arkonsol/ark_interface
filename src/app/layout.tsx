@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+
 const poppins = localFont({
   src: [
     {
@@ -97,9 +98,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en" className={`${poppins.variable} ${ibmPlexMono.variable} ${exo2.variable} ${spaceGrotesk.variable} ${orbitron.variable}`}>
-      <body>{children}</body>
+      <body>
+            {children}
+      </body>
     </html>
   );
 }

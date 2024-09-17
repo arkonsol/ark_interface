@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const navItems = [
   { name: 'Docs', href: 'https://your-gitbook-docs-url.com', external: true },
-  { name: 'Blog', href: 'https://your-substack-url.com', external: true },
+  { name: 'Blog', href: 'https://arkonsol.substack.com/', external: true },
   { name: 'About', href: '/about' },
   { name: 'Contact Us', href: '/contact' },
 ];
@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <header className={`fixed top-0 left-0 bg-black right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/home" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2">
           <Image
             src="/images/ark.jpg" 
             alt="ARK Logo"
