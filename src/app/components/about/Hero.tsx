@@ -39,7 +39,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl text-gray-300"
         >
-          Ark is a decentralized platform empowering communities to create and manage Public Autonomous Organizations (PAOs), ensuring open governance and public participation in a transparent and secure way.
+          Ark is an onchain protocol that allows organizations to create and manage Para Autonomous Organizations (PAOs).
         </motion.p>
       </div>
     </section>

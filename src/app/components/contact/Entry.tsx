@@ -63,7 +63,7 @@ const ContactPage: React.FC = () => {
         <ContactSection
           title="Partnership and Collaboration Inquiries"
           icon={<FiGithub className="text-3xl" />}
-          content="Interested in collaborating with us? Reach out at partnerships@arkpao.org."
+          content="Interested in collaborating with us? Reach out at partnerships@thearkonsol.xyz."
         />
       </motion.div>
     </motion.div>
@@ -120,7 +120,7 @@ const ContactForm: React.FC = () => (
 );
 
 const CommunityLinks: React.FC = () => (
-  <div className="flex space-x-4">
+  <div className="flex space-x-4 text-sm">
     <a href="#" className="text-teal-200 hover:text-white">
       Discord
     </a>

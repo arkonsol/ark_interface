@@ -31,7 +31,7 @@ const itemVariants = {
 
 const MissionStatement = () => (
   <motion.section
-    className={`${sectionStyle} bg-white bg-white bg-opacity-10 backdrop-blur-lg rounded-xl`}
+    className={`${sectionStyle} bg-white bg-opacity-10 backdrop-blur-lg rounded-xl`}
     variants={containerVariants}
     initial="hidden"
     animate="visible"
@@ -40,14 +40,14 @@ const MissionStatement = () => (
       <FiTarget className={iconStyle} /> Mission Statement
     </motion.h2>
     <motion.p variants={itemVariants}>
-      Our mission is to build a future where organizations are governed by communities and operate autonomously on the blockchain, enabling true transparency, inclusivity, and decentralization.
+      Our mission is to prove that any type of organization can be governed onchain through Para Autonomous Organizations (PAOs) which eliminates the limitations of the current Decentralized Autonomous Organization (DAO) structure.
     </motion.p>
   </motion.section>
 );
 
 const CoreValues = () => (
   <motion.section
-    className={`${sectionStyle} bg-white bg-white bg-opacity-10 backdrop-blur-lg rounded-xl`}
+    className={`${sectionStyle} bg-white bg-opacity-10 backdrop-blur-lg rounded-xl`}
     variants={containerVariants}
     initial="hidden"
     animate="visible"
@@ -56,7 +56,7 @@ const CoreValues = () => (
       <FiHeart className={iconStyle} /> Core Values
     </motion.h2>
     <motion.ul variants={itemVariants}>
-      {['Transparency', 'Decentralization', 'Community-driven decisions', 'Inclusivity', 'Innovation'].map((value, index) => (
+      {['Unity', 'Creativity', 'Community-driven decisions', 'Inclusivity', 'Innovation'].map((value, index) => (
         <motion.li key={index} className="mb-2" whileHover={{ x: 10 }}>
           {value}
         </motion.li>
@@ -67,7 +67,7 @@ const CoreValues = () => (
 
 const Technology = () => (
   <motion.section
-    className={`${sectionStyle} bg-white bg-white bg-opacity-10 backdrop-blur-lg rounded-xl`}
+    className={`${sectionStyle} bg-white bg-opacity-10 backdrop-blur-lg rounded-xl`}
     variants={containerVariants}
     initial="hidden"
     animate="visible"
@@ -76,7 +76,7 @@ const Technology = () => (
       <FiCpu className={iconStyle} /> Technology Behind the PAO
     </motion.h2>
     <motion.p variants={itemVariants}>
-      Ark is built on the Solana blockchain, utilizing smart contracts and decentralized applications (dApps) to automate and secure governance processes.
+      Ark is built on the Solana blockchain, utilizing Anchor and Typescript.
     </motion.p>
   </motion.section>
 );
@@ -108,7 +108,7 @@ const Partnerships = () => (
       <FiLink className={iconStyle} /> Partnerships and Collaborations
     </motion.h2>
     <motion.ul variants={itemVariants}>
-      {['Solana', 'Rust',].map((partner, index) => (
+      {['Solana', 'Rust', 'Typescript'].map((partner, index) => (
         <motion.li key={index} className="mb-2" whileHover={{ x: 10 }}>
           {partner}
         </motion.li>
