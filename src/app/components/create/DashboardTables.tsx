@@ -132,54 +132,64 @@ const DashboardTables: React.FC = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="w-full my-8"></div>
+      <motion.div initial="hidden" animate="visible" className="">
+        <div className="w-full my-8"></div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {cardData.map((card, index) => (
-          <Card
-            key={index}
-            title={card.title}
-            value={card.value}
-            icon={card.icon}
-          />
-        ))}
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {cardData.map((card, index) => (
+            <Card
+              key={index}
+              title={card.title}
+              value={card.value}
+              icon={card.icon}
+            />
+          ))}
+        </div>
 
-      {/* Render the PAO sections */}
-      <motion.div
-        variants={itemVariants}
-        className="mt-8 bg-black bg-opacity-30 border border-teal-500 rounded-lg p-6 mb-[4rem]"
-      >
-        {paoData.map((pao, index) => (
-          <>
-            <div key={index}>
-              <h3 className="text-teal-300 flex items-center text-xl mb-4 ">
-                <FiAward className="mr-2" /> {pao.title}
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                  <p className="text-teal-300">Members</p>
-                  <p className="text-2xl font-semibold text-white">
-                    {pao.members}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-teal-300">Treasury</p>
-                  <p className="text-2xl font-semibold text-white">
-                    {pao.treasury}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-teal-300">Voting System</p>
-                  <p className="text-2xl font-semibold text-white">
-                    {pao.votingSystem}
-                  </p>
+        {/* Render the PAO sections */}
+        <motion.div
+          variants={itemVariants}
+          className="mt-8 bg-black bg-opacity-30 border border-teal-500 rounded-lg p-6"
+        >
+          {paoData.map((pao, index) => (
+            <>
+              <div key={index}>
+                <h3 className="text-teal-300 flex items-center text-xl mb-4 ">
+                  <FiAward className="mr-2" /> {pao.title}
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div>
+                    <p className="text-teal-300">Members</p>
+                    <p className="text-2xl font-semibold text-white">
+                      {pao.members}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-teal-300">Treasury</p>
+                    <p className="text-2xl font-semibold text-white">
+                      {pao.treasury}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-teal-300">Voting System</p>
+                    <p className="text-2xl font-semibold text-white">
+                      {pao.votingSystem}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            {index !== paoData.length - 1 && <hr className="my-5" />}{" "}
-          </>
-        ))}
+              {index !== paoData.length - 1 && <hr className="my-5" />}{" "}
+            </>
+          ))}
+        </motion.div>
+        <div className="w-full flex items-center justify-center mt-5 mb-[4rem]">
+          <div className="join border-teal-900">
+            <button className="join-item btn btn-active bg-teal-950">1</button>
+            <button className="join-item btn bg-teal-800">2</button>
+            <button className="join-item btn bg-teal-800">3</button>
+            <button className="join-item btn bg-teal-800">4</button>
+          </div>
+        </div>
       </motion.div>
 
       <RecentActiviy />
