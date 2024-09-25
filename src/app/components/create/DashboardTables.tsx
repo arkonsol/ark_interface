@@ -18,6 +18,7 @@ type CardProps = {
 };
 
 type PaoData = {
+  id: string;
   title: string;
   members: string;
   treasury: string;
@@ -52,18 +53,21 @@ const cardData: CardProps[] = [
 
 const paoData: PaoData[] = [
   {
+    id: "mother-dao",
     title: "Mother DAO",
     members: "5,778",
     treasury: "$8,000,000",
     votingSystem: "Conviction",
   },
   {
+    id: "father-dao",
     title: "Father DAO",
     members: "7,234",
     treasury: "$12,500,000",
     votingSystem: "Quadratic Voting",
   },
   {
+    id: "uncle-dao",
     title: "Uncle DAO",
     members: "6,345",
     treasury: "$10,200,000",
@@ -83,14 +87,14 @@ const Card: React.FC<CardProps> = ({ title, value, icon: Icon }) => (
   </motion.div>
 );
 
-const RecentActiviy: React.FC = function () {
+const RecentActiviy: React.FC = function() {
   return (
     <motion.div variants={itemVariants}>
       <h2 className="w-full text-center text-3xl text-teal-300 font-bold mb-[4rem]">
         Recent Activiy
       </h2>
       <ul>
-        {activityData.map(function (item, index) {
+        {activityData.map(function(item, index) {
           return (
             <motion.li
               whileHover={{
@@ -153,32 +157,34 @@ const DashboardTables: React.FC = () => {
         >
           {paoData.map((pao, index) => (
             <>
-              <div key={index}>
-                <h3 className="text-teal-300 flex items-center text-xl mb-4 ">
-                  <FiAward className="mr-2" /> {pao.title}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div>
-                    <p className="text-teal-300">Members</p>
-                    <p className="text-2xl font-semibold text-white">
-                      {pao.members}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-teal-300">Treasury</p>
-                    <p className="text-2xl font-semibold text-white">
-                      {pao.treasury}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-teal-300">Voting System</p>
-                    <p className="text-2xl font-semibold text-white">
-                      {pao.votingSystem}
-                    </p>
+              <Link href={`/pao/${pao.id}`}>
+                <div key={index}>
+                  <h3 className="text-teal-300 flex items-center text-xl mb-4 ">
+                    <FiAward className="mr-2" /> {pao.title}
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                      <p className="text-teal-300">Members</p>
+                      <p className="text-2xl font-semibold text-white">
+                        {pao.members}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-teal-300">Treasury</p>
+                      <p className="text-2xl font-semibold text-white">
+                        {pao.treasury}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-teal-300">Voting System</p>
+                      <p className="text-2xl font-semibold text-white">
+                        {pao.votingSystem}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              {index !== paoData.length - 1 && <hr className="my-5" />}{" "}
+                {index !== paoData.length - 1 && <hr className="my-5" />}{" "}
+              </Link>
             </>
           ))}
         </motion.div>
