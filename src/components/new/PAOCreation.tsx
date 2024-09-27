@@ -1,32 +1,32 @@
-'use client'
-import React, { useState, useEffect } from 'react'
-import { useRouter, useParams } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
-import { FiX, FiUpload } from 'react-icons/fi'
-import DidYouKnowModal from './DidYouKnowModal'
+"use client";
+import React, { useState, useEffect } from "react";
+import { useRouter, useParams } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiUpload } from "react-icons/fi";
+import DidYouKnowModal from "./DidYouKnowModal";
 
 const PaoCreationPage = () => {
-  const [loading, setLoading] = useState(true)
-  const [showModal, setShowModal] = useState(true)
-  const router = useRouter()
-  const params = useParams()
+  const [loading, setLoading] = useState(true);
+  const [, setShowModal] = useState(true);
+  const router = useRouter();
+  const params = useParams();
 
   useEffect(() => {
     // Simulate loading
     const timer = setTimeout(() => {
-      setLoading(false)
-      setShowModal(false)
-    }, 7000)
+      setLoading(false);
+      setShowModal(false);
+    }, 7000);
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
+    event.preventDefault();
     // TODO: Implement form submission logic
-    const paoId = 'example-pao-id'
-    router.push(`/pao/${paoId}`)
-  }
+    const paoId = "example-pao-id";
+    router.push(`/pao/${paoId}`);
+  };
 
   if (loading) {
     return (
@@ -42,13 +42,11 @@ const PaoCreationPage = () => {
           </AnimatePresence>
         </motion.div>
       </div>
-    )
+    );
   }
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-teal-700 to-teal-900 p-8">
-
-
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -76,7 +74,9 @@ const PaoCreationPage = () => {
         </div>
 
         <div>
-          <label htmlFor="name" className="block text-white mb-2">Name</label>
+          <label htmlFor="name" className="block text-white mb-2">
+            Name
+          </label>
           <input
             type="text"
             id="name"
@@ -86,7 +86,9 @@ const PaoCreationPage = () => {
         </div>
 
         <div>
-          <label htmlFor="description" className="block text-white mb-2">Description</label>
+          <label htmlFor="description" className="block text-white mb-2">
+            Description
+          </label>
           <textarea
             id="description"
             rows={4}
@@ -96,7 +98,9 @@ const PaoCreationPage = () => {
         </div>
 
         <div>
-          <label htmlFor="nftMint" className="block text-white mb-2">NFT Mint Address</label>
+          <label htmlFor="nftMint" className="block text-white mb-2">
+            NFT Mint Address
+          </label>
           <input
             type="text"
             id="nftMint"
@@ -106,7 +110,9 @@ const PaoCreationPage = () => {
         </div>
 
         <div>
-          <label htmlFor="splTokenMint" className="block text-white mb-2">SPL Token Mint Address</label>
+          <label htmlFor="splTokenMint" className="block text-white mb-2">
+            SPL Token Mint Address
+          </label>
           <input
             type="text"
             id="splTokenMint"
@@ -125,7 +131,7 @@ const PaoCreationPage = () => {
         </motion.button>
       </motion.form>
     </div>
-  )
-}
+  );
+};
 
-export default PaoCreationPage
+export default PaoCreationPage;

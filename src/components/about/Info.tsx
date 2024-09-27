@@ -128,7 +128,7 @@ const Roadmap = () => (
       <FiMap className={iconStyle} /> Future Roadmap
     </motion.h2>
     <motion.p variants={itemVariants}>
-      We're working towards integrating more blockchain networks, enhancing governance tools, and building a robust ecosystem of decentralized organizations.
+      We&apos;re working towards integrating more blockchain networks, enhancing governance tools, and building a robust ecosystem of decentralized organizations.
     </motion.p>
   </motion.section>
 );

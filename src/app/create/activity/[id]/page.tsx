@@ -1,9 +1,8 @@
 "use client";
 
-import RecentActivity from "@/app/components/activity/Activities";
-import { useRouter } from "next/router";
+import RecentActivity from "@/components/activity/Activities";
 import { useEffect, useState } from "react";
-import { activityData } from "@/app/components/activity/activityData";
+import { activityData } from "@/components/activity/activityData";
 import Link from "next/link";
 
 export default function Page({ params }: { params: { id: string } }) {

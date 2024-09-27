@@ -1,9 +1,9 @@
-"use client"
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
-import { FiArrowLeft } from 'react-icons/fi';
-import Header from '../app/components/landing/Header'; // Make sure the path is correct
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { FiArrowLeft } from "react-icons/fi";
+import Header from "../components/landing/Header"; // Make sure the path is correct
 
 export default function NotFound() {
   const router = useRouter();
@@ -16,11 +16,11 @@ export default function NotFound() {
           className="absolute inset-0 z-0"
           animate={{
             background: [
-              'linear-gradient(45deg, #000000, #001a1a)',
-              'linear-gradient(45deg, #001a1a, #003333)',
-              'linear-gradient(45deg, #003333, #004d4d)',
-              'linear-gradient(45deg, #004d4d, #006666)',
-              'linear-gradient(45deg, #006666, #000000)',
+              "linear-gradient(45deg, #000000, #001a1a)",
+              "linear-gradient(45deg, #001a1a, #003333)",
+              "linear-gradient(45deg, #003333, #004d4d)",
+              "linear-gradient(45deg, #004d4d, #006666)",
+              "linear-gradient(45deg, #006666, #000000)",
             ],
           }}
           transition={{
@@ -40,14 +40,15 @@ export default function NotFound() {
           >
             404
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-2xl md:text-3xl text-white mb-8"
           >
-            Oops! Looks like you've ventured into an uncharted realm. Let's take you back to ARK🌊.
+            Oops! Looks like you&apos;ve ventured into an uncharted realm.
+            Let&apos;s take you back to ARK🌊.
           </motion.p>
 
           <motion.button
@@ -91,7 +92,7 @@ export default function NotFound() {
             transition={{
               duration: Math.random() * 20 + 10,
               repeat: Infinity,
-              repeatType: 'loop',
+              repeatType: "loop",
             }}
           />
         ))}

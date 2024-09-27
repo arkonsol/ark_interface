@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { FiBell, FiGlobe, FiCheck } from 'react-icons/fi';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
@@ -21,7 +20,6 @@ const languages = {
 };
 
 export default function DashboardHeader() {
-  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);

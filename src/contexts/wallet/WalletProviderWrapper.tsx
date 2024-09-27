@@ -19,7 +19,7 @@ export default function WalletProviderWrapper({ children }: { children: React.Re
       new TorusWalletAdapter(),
       // Add more wallet adapters here
     ],
-    [network]
+    []
   );
 
   return (
