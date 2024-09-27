@@ -1,5 +1,5 @@
 "use client";
-import RecentActivity from "@/app/components/activity/Activities";
+import RecentActivity from "@/components/activity/Activities";
 import React from "react";
 
 const Page = () => {

@@ -1,4 +1,4 @@
-import AboutPage from "../components/about/Entry"
+import AboutPage from "../../components/about/Entry"
 
 const Home = () => {
   return (

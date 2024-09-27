@@ -1,5 +1,5 @@
 "use client"
-import PAODashboard from "@/app/components/pao/PAODashboard"
+import PAODashboard from "@/components/pao/PAODashboard"
 
 const PAOPage = () => {
   return (

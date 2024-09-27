@@ -1,7 +1,7 @@
 "use client";
-import DashboardSearch from "../components/create/DashboardSearch";
-import DashboardTables from "../components/create/DashboardTables";
-import NewsLetter from "../components/landing/NewsLetter";
+import DashboardSearch from "../../components/create/DashboardSearch";
+import DashboardTables from "../../components/create/DashboardTables";
+import NewsLetter from "../../components/landing/NewsLetter";
 
 export default function Dashboard() {
   return (

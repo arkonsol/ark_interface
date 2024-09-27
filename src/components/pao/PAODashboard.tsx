@@ -95,10 +95,8 @@ const PAODashProposals = function ({ paoData }: { paoData: PAOData }) {
 };
 
 const PAODashGovernancePower = function ({
-  paoData,
   publicKey,
 }: {
-  paoData: PAOData;
   publicKey: PublicKey | null;
 }) {
   return (
@@ -113,7 +111,7 @@ const PAODashGovernancePower = function ({
   );
 };
 
-const PAODashNFT = function ({ paoData }: { paoData: PAOData }) {
+const PAODashNFT = function () {
   return (
     <div className="bg-teal-800 p-4 rounded-lg">
       <h2 className="text-lg font-semibold mb-2">NFTs</h2>
@@ -174,11 +172,8 @@ const PAODashboard: React.FC<PAODashboardProps> = ({ id }) => {
         </div>
 
         <div className="space-y-4">
-          <PAODashGovernancePower
-            paoData={paoData}
-            publicKey={walletData.publicKey}
-          />
-          <PAODashNFT paoData={paoData} />
+          <PAODashGovernancePower publicKey={walletData.publicKey} />
+          <PAODashNFT />
           <PAODashPAOAssets paoData={paoData} />
           <PAODashPrograms paoData={paoData} />
         </div>

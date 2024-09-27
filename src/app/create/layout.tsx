@@ -1,6 +1,6 @@
-import DashboardHeader from "../components/getstarted/DashboardHeader";
-import Footer from "../components/landing/Footer";
-import AppWalletProvider from "../components/AppWalletProvider";
+import DashboardHeader from "../../components/getstarted/DashboardHeader";
+import Footer from "../../components/landing/Footer";
+import AppWalletProvider from "../../components/AppWalletProvider";
 export default function DashboardLayout({
   children,
 }: {
