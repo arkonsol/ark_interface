@@ -96,7 +96,7 @@ export default function Header() {
           </ul>
         </nav>
         
-        <Link href="/create" className="hidden md:block bg-[#008080] font-semibold text-white px-8 py-2 rounded-lg border-2 border-[#008080] hover:bg-black hover:text-[#008080] transition-colors duration-300">
+        <Link href="https://app.useark.xyz" className="hidden md:block bg-[#008080] font-semibold text-white px-8 py-2 rounded-lg border-2 border-[#008080] hover:bg-black hover:text-[#008080] transition-colors duration-300">
           Create PAO
         </Link>
       </div>
@@ -129,7 +129,7 @@ export default function Header() {
           ))}
           <li className="py-2">
             <Link
-              href="/create"
+              href="https://app.useark.xyz"
               className="block px-3 py-2 bg-[#008080] text-white rounded-lg transition-colors duration-300 hover:bg-[#006666]"
               onClick={toggleMenu}
             >
