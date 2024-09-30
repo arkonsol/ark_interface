@@ -2,6 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+
 
 const HeroSection = () => {
   const router = useRouter();
@@ -54,7 +56,7 @@ const HeroSection = () => {
               className="bg-teal-500 text-white font-semibold py-3 px-8 rounded-full text-lg transition-colors duration-300 hover:bg-teal-600 hero-button"
               onClick={handleClick}
             >
-          Launch App
+          <Link href={"https://app.useark.xyz/"} className='w-full h-full'>Launch App</Link>
         </motion.button>
           <motion.button 
             whileHover={{ scale: 1.05 }}
