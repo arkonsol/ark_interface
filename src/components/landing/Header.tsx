@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 const navItems = [
-  { name: 'Docs', href: 'https://your-gitbook-docs-url.com', external: true },
-  { name: 'Blog', href: 'https://arkonsol.substack.com/', external: true },
+  { name: 'Docs', href: 'https://docs.useark.xyz/', external: true },
+  { name: 'Blog', href: 'https://useark.substack.com/', external: true },
   { name: 'About', href: '/about' },
   { name: 'Contact Us', href: '/contact' },
 ];
