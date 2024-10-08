@@ -63,7 +63,7 @@ const HeroSection = () => {
             whileTap={{ scale: 0.95 }}
             className="bg-white text-teal-500 font-semibold py-3 px-8 rounded-full text-lg transition-colors duration-300 hover:bg-teal-100 hover:text-teal-600 hero-button"
           >
-            Read Litepaper
+            <a href="/The ARK Lite Paper.pdf" download="The Ark Lite Paper" className="w-full h-full">Download Lite Paper</a>
           </motion.button>
         </div>
       </div>
